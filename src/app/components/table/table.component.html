@@ -1,0 +1,22 @@
+<div class="table-none md:table-fixed">
+    <table class = "table-fixed">
+        <thead>
+            <tr>
+            @for(header of tableHeaders; track header) {
+                <th>{{header}}</th>
+                }
+            </tr>
+        </thead>
+        <tbody>
+
+                @for(item of toTable; track item) {
+                    <tr>
+                    @for(header of tableHeaders; track header){
+                            <td>{{item[header]}}</td>
+                        }
+                    </tr>
+                    }
+
+          </tbody>
+    </table>    
+</div>
