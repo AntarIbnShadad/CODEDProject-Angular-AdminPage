@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.profileImg{
+    border-radius: 50px;
+    box-shadow: black 2px -1px 10px 0px
+}

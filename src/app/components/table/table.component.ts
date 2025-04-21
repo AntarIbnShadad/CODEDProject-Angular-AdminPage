@@ -1,11 +1,12 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { USERS } from '../../data/users';
+import { RowPipePipe } from '../../pipes/row-pipe.pipe';
 
 @Component({
   selector: 'app-table',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RowPipePipe],
   templateUrl: './table.component.html',
   styleUrl: './table.component.css'
 })

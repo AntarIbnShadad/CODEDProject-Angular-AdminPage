@@ -1,5 +1,5 @@
-<div class="table-none md:table-fixed">
-    <table class = "table-fixed">
+<div class="border-collapse border border-gray-400">
+    <table class = "wp aec aei">
         <thead>
             <tr>
             @for(header of tableHeaders; track header) {
@@ -12,7 +12,7 @@
                 @for(item of toTable; track item) {
                     <tr>
                     @for(header of tableHeaders; track header){
-                            <td>{{item[header]}}</td>
+                            <td [innerHTML]="item[header] | rowPipe" ></td>
                         }
                     </tr>
                     }
