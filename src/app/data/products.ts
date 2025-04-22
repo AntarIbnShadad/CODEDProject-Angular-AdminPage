@@ -1,7 +1,10 @@
 
 type Status = "out-of-stock" | "available" | "archived"
 
-
+export interface ImageLink{
+  imageLink: string
+}
+  
 export const PRODUCTS: Product[] = [
     {
       id: 1,
@@ -12,7 +15,7 @@ export const PRODUCTS: Product[] = [
       stock: 120,
       status: "archived",
       rating: 4.5,
-      imageUrl: "https://picsum.photos/seed/mouse/150/150",
+      imageUrl: {imageLink:"https://picsum.photos/seed/mouse/150/150"},
       createdAt: new Date("2024-04-01T10:00:00Z"),
       updatedAt: new Date("2024-06-10T15:25:00Z"),
       tags: ["bestseller", "tech", "accessories"]
@@ -26,7 +29,7 @@ export const PRODUCTS: Product[] = [
       stock: 0,
       status: "out-of-stock",
       rating: 3.8,
-      imageUrl: "https://picsum.photos/seed/tshirt/150/150",
+      imageUrl: {imageLink:"https://picsum.photos/seed/tshirt/150/150"},
       createdAt: new Date("2024-01-20T13:15:00Z"),
       updatedAt: new Date("2024-05-28T11:10:00Z"),
       tags: ["clearance", "clothing"]
@@ -40,7 +43,7 @@ export const PRODUCTS: Product[] = [
       stock: 20,
       status: "archived",
       rating: 4.9,
-      imageUrl: "https://picsum.photos/seed/desk/150/150",
+      imageUrl: {imageLink:"https://picsum.photos/seed/desk/150/150"},
       createdAt: new Date("2024-02-10T08:00:00Z"),
       updatedAt: new Date("2024-06-01T09:45:00Z"),
       tags: ["office", "ergonomic"]
@@ -56,7 +59,7 @@ export const PRODUCTS: Product[] = [
     stock: number,
     status: Status,
     rating: number,
-    imageUrl: string,
+    imageUrl: ImageLink,
     createdAt: Date,
     updatedAt: Date | undefined,
     tags: string[]

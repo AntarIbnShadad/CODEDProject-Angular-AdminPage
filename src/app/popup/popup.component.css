@@ -1,0 +1,118 @@
+/* Modal Background with Blur Effect */
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    backdrop-filter: blur(5px); /* Background blur effect */
+    display: none; /* Modal hidden by default */
+    align-items: center;
+    justify-content: center;
+    z-index: 1000; /* Ensure the modal is above other content */
+  }
+  
+  .modal-backdrop.show {
+    display: flex; /* Modal is shown when "show" class is added */
+  }
+  
+  /* Modal Styling */
+  .modal {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    width: 500px;
+    max-width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow-y: auto;
+  }
+  
+  /* Close button for the modal */
+  .modal .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  .modal .close-btn:hover {
+    background-color: #d32f2f;
+  }
+  
+  /* Form Styling (Inner HTML generated content) */
+  form {
+    display: grid;
+    gap: 20px;
+  }
+  
+  label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"],
+  input[type="number"],
+  input[type="email"],
+  input[type="date"],
+  input[type="checkbox"],
+  select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 14px;
+  }
+  
+  input[type="text"]:focus,
+  input[type="number"]:focus,
+  input[type="email"]:focus,
+  input[type="date"]:focus,
+  select:focus {
+    border-color: #4CAF50;
+    outline: none;
+  }
+  
+  /* Checkbox Styling */
+  input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  
+  /* Submit Button */
+  .actions button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .actions button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Styling for form input elements when generating HTML dynamically */
+  input[type="file"] {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+  }
+  

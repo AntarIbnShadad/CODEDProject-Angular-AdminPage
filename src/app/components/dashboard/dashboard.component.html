@@ -1,0 +1,32 @@
+<div class="dashboard-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="logo">
+        <h2>Admin</h2>
+      </div>
+      <nav>
+        <ul>
+          <li class="menu-item" [class.active]="currentTab === 'users'" (click)="setTab('users')">Users</li>
+          <li class="menu-item" [class.active]="currentTab === 'products'" (click)="setTab('products')">Products</li>
+        </ul>
+      </nav>
+    </aside>
+  
+    <!-- Main Content Area -->
+    <div class="main-content">
+      <!-- Top Navbar -->
+      <app-navbaar></app-navbaar>
+  
+      <!-- Content Area -->
+      <section class="content-area">
+        <!-- Dynamic content based on selected tab -->
+        <div *ngIf="currentTab === 'users'">    <app-table></app-table> </div>
+        <div *ngIf="currentTab === 'products'">    
+            <app-table></app-table> 
+        </div>
+        <button (click)="popup.open()">Open Popup Form</button>
+        <app-popup #popup></app-popup>
+      </section>
+    </div>
+  </div>
+

@@ -1,0 +1,14 @@
+<!-- Modal Backdrop and Popup -->
+<div class="modal-backdrop" [ngClass]="{'show': showPopup}">
+    <div class="modal">
+      <button class="close-btn" (click)="close()">×</button>
+      
+      <!-- Bind sanitized HTML here -->
+      <div [innerHTML]="formHTML"></div>
+  
+      <div class="actions">
+        <button (click)="submit()">Submit</button>
+      </div>
+    </div>
+  </div>
+  

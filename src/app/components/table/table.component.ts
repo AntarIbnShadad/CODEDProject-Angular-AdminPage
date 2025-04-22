@@ -1,25 +1,35 @@
 import { Component, Input } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { USERS } from '../../data/users';
 import { RowPipePipe } from '../../pipes/row-pipe.pipe';
+import { PopupComponent } from '../../popup/popup.component';
+import { PRODUCTS , Product} from '../../data/products';
 
 @Component({
   selector: 'app-table',
   standalone: true,
-  imports: [CommonModule, RowPipePipe],
+  imports: [RowPipePipe, PopupComponent],
   templateUrl: './table.component.html',
-  styleUrl: './table.component.css'
+  styleUrls: ['./table.component.css']
 })
 export class TableComponent {
-  @Input() toTable: any = []
-  @Input() columns:number = 0 // if -1 will show all headers
-  tableHeaders: string[]  = []
+  @Input() toTable: any = [];
+  tableHeaders: string[] = [];
+  showPopup = false; // Used to toggle the popup
 
   constructor() {
-    this.toTable = USERS
-    this.tableHeaders = Object.keys(this.toTable[0]).map(header => header.toString())
+    this.toTable = PRODUCTS;
+    this.tableHeaders = Object.keys(this.toTable[0]).map(header => header.toString());
   }
+
+  openPopup() {
+    this.showPopup = true; // Show the popup
+  }
+
+  close() {
+    this.showPopup = false; // Close the popup
+  }
+
   log(toLog:any){
-    console.log(toLog)
+    console.log(toLog);
   }
 }
