@@ -1,5 +1,5 @@
 <div class="dashboard-container">
-    <!-- Sidebar -->
+
     <aside class="sidebar">
       <div class="logo">
         <h2>Admin</h2>
@@ -12,18 +12,20 @@
       </nav>
     </aside>
   
-    <!-- Main Content Area -->
+
     <div class="main-content">
-      <!-- Top Navbar -->
+
       <app-navbaar></app-navbaar>
   
-      <!-- Content Area -->
+
       <section class="content-area">
-        <!-- Dynamic content based on selected tab -->
-        <div *ngIf="currentTab === 'users'">    <app-table></app-table> </div>
+
+        <div *ngIf="currentTab === 'users'">    <app-table [toTable]="UserList"></app-table> </div>
         <div *ngIf="currentTab === 'products'">    
-            <app-table></app-table> 
+            <app-table [toTable] = "ProductList" ></app-table> 
+            <app-table [toTable]="UserList"></app-table>
         </div>
+        <app-table [toTable] = "ProductList" ></app-table> 
         <button (click)="popup.open()">Open Popup Form</button>
         <app-popup #popup></app-popup>
       </section>

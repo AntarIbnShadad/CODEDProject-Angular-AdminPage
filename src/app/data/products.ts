@@ -4,6 +4,8 @@ type Status = "out-of-stock" | "available" | "archived"
 export interface ImageLink{
   imageLink: string
 }
+
+
   
 export const PRODUCTS: Product[] = [
     {

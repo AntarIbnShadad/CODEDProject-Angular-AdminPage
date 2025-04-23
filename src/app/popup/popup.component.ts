@@ -47,10 +47,10 @@ export class PopupComponent {
       id: newId,
       name: '',
       email: '',
-      role: '', // or leave for select
-      status: '', // or leave for select
-      createdAt: new Date(), // or leave empty
-      lastLogin: new Date(), // or leave empty
+      role: '', 
+      status: '', 
+      createdAt: new Date(), 
+      lastLogin: new Date(), 
       isEmailVerified: false,
       avatarUrl: { imageLink: '' }
     };

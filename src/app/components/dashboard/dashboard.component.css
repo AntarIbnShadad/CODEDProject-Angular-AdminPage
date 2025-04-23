@@ -1,49 +1,51 @@
 /* General Layout */
 .dashboard-container {
-    @apply flex h-screen bg-gray-100;
-  }
-  
-  /* Sidebar Styles */
-  .sidebar {
-    @apply w-64 bg-gradient-to-r from-blue-500 to-indigo-600 text-white p-6 fixed top-0 left-0 h-full;
-  }
-  
-  .sidebar .logo h2 {
-    @apply text-2xl font-bold mb-8;
-  }
-  
-  .sidebar nav ul {
-    @apply list-none p-0;
-  }
-  
-  .menu-item {
-    @apply py-2 px-4 rounded-lg cursor-pointer transition-colors duration-300;
-  }
-  
-  .menu-item:hover,
-  .menu-item.active {
-    @apply bg-indigo-700;
-  }
-  
-  /* Main Content Styles */
-  .main-content {
-    @apply flex-1 ml-64 p-6;
-  }
-  
-  /* Navbar Styles */
-  .navbar {
-    @apply bg-white p-4 rounded-lg shadow-md flex justify-between items-center mb-6;
-  }
-  
-  .navbar h1 {
-    @apply text-xl font-semibold text-gray-800;
-  }
-  
-  .user-info {
-    @apply text-sm text-gray-600;
-  }
-  
-  /* Content Area */
-  .content-area {
-    @apply bg-white p-6 rounded-lg shadow-md;
-  }
+  @apply flex h-screen bg-gray-100;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  @apply w-64 bg-gradient-to-r from-blue-500 to-indigo-600 text-white p-6 h-full;
+  /* Removed `fixed`, so it plays nicely in flex layout */
+}
+
+.sidebar .logo h2 {
+  @apply text-2xl font-bold mb-8;
+}
+
+.sidebar nav ul {
+  @apply list-none p-0;
+}
+
+.menu-item {
+  @apply py-2 px-4 rounded-lg cursor-pointer transition-colors duration-300;
+}
+
+.menu-item:hover,
+.menu-item.active {
+  @apply bg-indigo-700;
+}
+
+/* Main Content Styles */
+.main-content {
+  @apply flex-1 p-6 overflow-auto;
+  /* `ml-64` is no longer needed since sidebar isn't fixed */
+}
+
+/* Navbar Styles */
+.navbar {
+  @apply bg-white p-4 rounded-lg shadow-md flex justify-between items-center mb-6;
+}
+
+.navbar h1 {
+  @apply text-xl font-semibold text-gray-800;
+}
+
+.user-info {
+  @apply text-sm text-gray-600;
+}
+
+/* Content Area */
+.content-area {
+  @apply bg-white p-6 rounded-lg shadow-md;
+}

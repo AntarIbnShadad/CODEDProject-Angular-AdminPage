@@ -10,3 +10,17 @@ export interface Dictionary<T>{
     if (constructorFn && value instanceof constructorFn) return true;
     return false;
   }
+
+  export const productSchema: Dictionary<string> = {
+    id:   'ID' ,
+    name: 'name' ,
+    description: 'description' ,
+    price: 'price' ,
+    category: 'category' ,
+    stock: 'stock' ,
+    status: 'status' ,
+    rating: 'rating' ,
+    imageUrl: 'image' ,
+    createdAt: 'Added' ,
+    updatedAt: 'Updated' ,
+  };

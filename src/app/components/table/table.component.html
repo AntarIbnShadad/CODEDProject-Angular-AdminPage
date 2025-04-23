@@ -2,8 +2,8 @@
     <table class = "wp aec aei">
         <thead>
             <tr>
-            @for(header of tableHeaders; track header) {
-                <th>{{header}}</th>
+            @for(h of tableHeaders; track h) {
+                <th >{{h | header}}</th>
                 }
             </tr>
         </thead>
@@ -11,8 +11,8 @@
 
                 @for(item of toTable; track item) {
                     <tr>
-                    @for(header of tableHeaders; track header){
-                            <td [innerHTML]="item[header] | rowPipe" ></td>
+                    @for(h of tableHeaders; track h){
+                            <td [innerHTML]="item[h] | rowPipe" ></td>
                         }
                     </tr>
                     }
